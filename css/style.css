@@ -245,7 +245,8 @@ input {
 
 .activites-cards .card {
     width: 250px;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     border-radius: 10px;
     margin: 15px;
     overflow: hidden;
@@ -266,10 +267,22 @@ input {
 
 .activites-cards .card-content {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
+/****** footer ***********/
+footer{
+    background-color: #F2F2F2;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 10px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
