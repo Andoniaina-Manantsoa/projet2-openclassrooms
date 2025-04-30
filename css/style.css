@@ -235,10 +235,9 @@ input {
     margin-left: 10px;
 }
 
-.activites-cards{
+.activites-cards {
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     margin-top: 33px;
 }
