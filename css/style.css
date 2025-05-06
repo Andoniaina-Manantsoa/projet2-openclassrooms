@@ -398,7 +398,6 @@ li {
         width: 297px;
         height: 380px;
     }
-
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -468,62 +467,73 @@ li {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    header .main-container{
-        padding: 10px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+        width: 335px;
+        height: 52px;
     }
-    .menu {
-        display: flex;
-        flex-direction: column;  
-        align-items: center;     
-        gap: 10px;               
+
+    p {
+        width: 335px;
+        height: 19px;
     }
-    
-    .menu-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;               
-    }
+
     .button-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hebergements,
-    .populaires {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
+        display: inline;
+        width: 335px;
     }
 
-    .hebergements-cards,
-    .populaires-cards {
-        flex-direction: column;
-        gap: 15px;
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
     }
 
-    .hebergements-cards .card,
-    .populaires-cards .card {
-        width: 100%;
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
+        width: 375px;
+        height: 1436px;
+        padding-bottom: 20px;
     }
 
-    .hebergements-cards img,
-    .populaires-cards img {
-        width: 100%;
-        height: auto;
+    .hebergements-cards .card {
+        width: 335px;
+        height: 207px;
+        padding-bottom: 15px;
+        gap: 4px;
+    }
+
+    .hebergements-cards img {
+        width: 335px;
+        height: 124px;
+    }
+
+    .activite {
+        width: 375px;
+        height: 1100px;
+        gap: 20px;
+        padding-bottom: 30px;
     }
 
     .activites-cards {
         flex-direction: column;
-        align-items: center;
+        margin: 10px;
     }
 
     .activites-cards .card {
-        width: 100%;
-        height: auto;
+        width: 315px;
+        height: 200px;
     }
 
     .activites-cards img {
-        width: 100%;
-        height: auto;
+        width: 315px;
+        height: 141px;
+    }
+
+    footer {
+        width: 375px;
+        height: 461px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
     }
 }
