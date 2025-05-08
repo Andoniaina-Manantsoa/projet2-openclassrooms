@@ -478,13 +478,16 @@ li {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
 
-    /*body {
+    /*
+    inutile car déjà dans le reset
+    body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }*/
 
     .main-container {
+        /* supprime le padding de 50px et géré l'espace pour chacune des parties*/
         padding: 0;
     }
 
