@@ -324,7 +324,7 @@ footer {
     justify-content: space-between;
 }
 
-footer h3{
+footer h3 {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -374,7 +374,7 @@ li {
         height: 614px;
     }
 
-    .populaires-cards .card{
+    .populaires-cards .card {
         width: 369px;
         height: 146px;
         margin-top: 30px;
@@ -410,13 +410,14 @@ li {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    form .filter-bar .button-group{
+    form .filter-bar .button-group {
         margin-top: 20px;
     }
 
     .hebergements-and-populaires {
         flex-direction: column;
     }
+
     .hebergements {
         width: 924px;
         height: 611px;
@@ -477,10 +478,17 @@ li {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
 
+    /*
+    inutile car déjà dans le reset
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }*/
+
+    .main-container {
+        /* supprime le padding de 50px et géré l'espace pour chacune des parties*/
+        padding: 0;
     }
 
     .menu {
@@ -611,8 +619,11 @@ li {
     }
 
     footer {
-        width: 375px;
+        /* width: 375px;*/
+        width: 100%;
+        padding: 50px !important;
         height: 461px;
         flex-direction: column;
+        gap: 30px;
     }
 }
