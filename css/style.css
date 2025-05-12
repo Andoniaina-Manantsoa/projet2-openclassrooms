@@ -78,7 +78,7 @@ nav a {
     width: 100%;
     max-width: 1440px;
     min-width: 375px;
-    padding:30px;
+    padding: 30px;
     box-sizing: border-box;
     margin-inline: auto;
 }
@@ -151,8 +151,10 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    outline: none; /* supprime le contour */
-    border: 1px solid #F2F2F2; /* remet ta bordure personnalisée */
+    outline: none;
+    /* supprime le contour */
+    border: 1px solid #F2F2F2;
+    /* remet ta bordure personnalisée */
 }
 
 .filter-bar {
@@ -240,7 +242,7 @@ input[type="text"]:focus {
 
 .hebergements-cards .card-title {
     margin-top: 0;
-    padding-bottom:10px ;
+    padding-bottom: 10px;
 }
 
 .hebergements-cards .card-subtitle {
@@ -301,7 +303,7 @@ input[type="text"]:focus {
 
 .populaires-cards .card-title {
     margin-top: 10px;
-    padding-bottom:10px ;
+    padding-bottom: 10px;
 }
 
 .populaires-cards .card-rating {
@@ -531,12 +533,17 @@ li {
     }
 
     .menu {
-        width: 375px;
+        width: 100%;
         height: 115px;
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        /*padding: 20px;*/
+        padding-top: 20px;
         gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
     }
 
     .menu a {
@@ -553,11 +560,20 @@ li {
 
     .menu-links {
         display: flex;
-        width: 375px;
+        width: 100%;
         height: 36px;
-        border-bottom: solid 0.1rem #d9d9d9;
+        /*border-bottom: solid 0.1rem #d9d9d9;*/
         margin-top: 30px;
-        gap: 30px;
+        /*gap: 30px;*/
+    }
+
+    .menu-links a {
+        width: 50%;
+        border-bottom: solid 2px #F2F2F2;
+    }
+
+    .menu-links a:hover {
+        border-bottom: solid 2px #0065FC;
     }
 
     h1 {
@@ -580,7 +596,8 @@ li {
     }
 
     .button-search::before {
-        content: "\f002"; /* code de l’icône de loupe Font Awesome */
+        content: "\f002";
+        /* code de l’icône de loupe Font Awesome */
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         font-size: 16px;
@@ -647,7 +664,7 @@ li {
         margin-top: 20px;
         padding: 0;
     }
-    
+
     .populaires-cards .card-title {
         padding: 0;
     }
@@ -684,7 +701,7 @@ li {
     }
 
     .hebergements-cards .card-title {
-        margin-bottom:10px ;
+        margin-bottom: 10px;
     }
 
     .hebergements-cards .card-subtitle {
