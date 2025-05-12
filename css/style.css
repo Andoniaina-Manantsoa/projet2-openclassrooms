@@ -37,6 +37,15 @@ a {
     gap: 10px;
 }
 
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 375px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-inline: auto;
+}
+
 h1 {
     margin-bottom: 20px;
 }
@@ -72,15 +81,6 @@ nav a {
     border-top: solid 2px var(--main-color);
     padding-top: 1.7rem;
     cursor: pointer;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    min-width: 375px;
-    padding: 30px;
-    box-sizing: border-box;
-    margin-inline: auto;
 }
 
 a {
@@ -317,24 +317,23 @@ input[type="text"]:focus {
 }
 
 .activite h2 {
-    padding-top: 20px;
+    padding-top: 10px;
     margin-left: 10px;
 }
 
 .activites-cards {
     margin-bottom: 20px;
     display: flex;
-    gap: 15px;
     margin-top: 33px;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
 }
 
 .activites-cards .card {
     width: 250px;
-    display: inline-flex;
-    flex-direction: column;
     border-radius: 10px;
     margin: 5px;
-    overflow: hidden;
 }
 
 .activites-cards .card-title {
@@ -453,6 +452,15 @@ li {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .main-container {
+        padding: 30px 50px 30px 50px;
+    }
+
+    .menu {
+    margin: 0;
+    padding: 0;
+    }
+
     .filter-bar {
         width: 668px;
         height: 91px;
@@ -466,7 +474,6 @@ li {
     .hebergements {
         width: 924px;
         height: 611px;
-        padding: 20px;
     }
 
     .hebergements-cards .card {
@@ -488,13 +495,12 @@ li {
     .populaires {
         width: 924px;
         height: 252px;
-        padding: 30px;
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 20px;
     }
 
     .populaires-cards a {
@@ -508,6 +514,13 @@ li {
     .populaires-cards .card-subtitle {
         height: 100%;
         font-size: 14px;
+    }
+
+    .activites-cards {
+        width: 864px;
+        height: 270px;
+        padding: 10px;
+        gap: 10px;
     }
 
     .activites-cards .card {
@@ -527,23 +540,21 @@ li {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-
     .main-container {
         padding: 0;
     }
 
     .menu {
-        width: 100%;
+        width: 100% !important;
         height: 115px;
         flex-direction: column;
         text-align: center;
-        /*padding: 20px;*/
         padding-top: 20px;
         gap: 10px;
     }
 
     nav a {
-        margin-left: 0;
+        margin: 0;
     }
 
     .menu a {
@@ -562,13 +573,10 @@ li {
         display: flex;
         width: 100%;
         height: 36px;
-        /*border-bottom: solid 0.1rem #d9d9d9;*/
         margin-top: 30px;
-        /*gap: 30px;*/
     }
 
     .menu-links a {
-        width: 50%;
         border-bottom: solid 2px #F2F2F2;
     }
 
@@ -717,7 +725,10 @@ li {
     }
 
     .activites-cards {
-        flex-direction: column;
+        width: 375px;
+        height: 965px;
+        display: grid;
+        gap: 30px;
     }
 
     .activites-cards .card {
