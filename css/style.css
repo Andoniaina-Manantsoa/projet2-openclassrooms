@@ -516,7 +516,8 @@ li {
     }
 
     .activites-cards .card {
-        width: 193px;
+        width: 193px !important;
+        min-width: 193px !important;
         height: 270px;
     }
 
