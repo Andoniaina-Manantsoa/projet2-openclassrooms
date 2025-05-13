@@ -98,11 +98,13 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
-.card img {
-    object-fit: cover;
+.hebergements-cards img,
+.activites-cards img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card-title {
@@ -247,8 +249,9 @@ input[type="text"]:focus {
 
 .hebergements-cards img {
     width: 250px;
-    height: 124px;
-    border-radius: 20px;
+    height: 185px;
+    /*border-radius: 20px;*/
+
     padding-bottom: 15px;
 }
 
@@ -346,17 +349,20 @@ input[type="text"]:focus {
 
 .activites-cards {
     display: flex;
+    justify-content: space-between;
+    gap: 15px;
     margin-top: 33px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding: 5px;
-    gap: 20px;
+    padding-inline: 10px;
 }
 
 .activites-cards .card {
-    width: 297px;
-    height: 439px;
-    border-radius: 10px;
+    width: 23%;
+    min-width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 5px;
+    overflow: hidden;
 }
 
 .activites-cards .card-title {
@@ -365,9 +371,9 @@ input[type="text"]:focus {
 }
 
 .activites-cards img {
-    width: 297px;
-    height: 380px;
-    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+    /*border-radius: 20px;*/
     padding-bottom: 15px;
 }
 
@@ -384,7 +390,7 @@ footer {
 }
 
 .footer-content {
-    max-width: 1340px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 0 30px;
     display: flex;
@@ -593,6 +599,11 @@ li {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
     .main-container {
         padding: 0;
     }
@@ -668,10 +679,15 @@ li {
         padding-left: 20px;
     }
 
+    .filter-bar {
+        width: 100%;
+    }
+
     .button-group {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 335px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        min-width: 335px;
         gap: 10px;
     }
 
@@ -690,9 +706,27 @@ li {
         padding-bottom: 30px;
     }
 
+    .afficher-plus {
+        margin-inline: 20px;
+    }
+
+    .populaires-cards,
+    .hebergements-cards,
+    .activites-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .card-title {
         width: 203px;
         height: 19px;
+    }
+
+
+    .hebergements-and-populaires section,
+    .hebergements-and-populaires aside {
+        padding-inline: 10px;
     }
 
     .hebergements-and-populaires {
@@ -705,15 +739,24 @@ li {
         width: 100%;
     }
 
-    .populaires-cards {
+
+    .populaires {
+        /*width: 375px;*/
+        height: 569px;
+        gap: 15px;
+    }
+
+    /*.populaires-cards {
         width: 100%;
         height: 569px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-    }
+    */}
+
     .populaires-cards .card {
-        width: 335px;
+        width: 80%;
+        min-width: 335px;
         height: 146px;
     }
 
@@ -743,14 +786,16 @@ li {
     }
 
     .hebergements-cards .card {
-        width: 335px;
+        width: 80%;
+        min-width: 335px;
         height: 207px;
         padding-bottom: 10px;
         gap: 4px;
     }
 
     .hebergements-cards img {
-        width: 335px;
+        width: 100%;
+        min-width: 335px;
         height: 124px;
     }
 
@@ -769,34 +814,32 @@ li {
     }
 
     .activite {
-        height: 965px;
+        width: 100%;
+        height: 1100px;
+        padding-bottom: 30px;
+        padding-inline: 0;
     }
 
-    .activites-cards {
-        width: 315px;
-        height: 845px;
-        display: grid;
-        gap: 15px;
     }
 
     .activites-cards .card {
-        width: 315px;
+        width: 80%;
+        min-width: 315px;
         height: 200px;
     }
 
     .activites-cards img {
-        width: 315px;
+        width: 100%;
+        min-width: 305px;
         height: 141px;
     }
 
     footer {
-        padding: 10px !important;
-        flex-direction: column;
-    }
+        width: 100% !important;
+        padding: 30px !important;
 
-    .footer-content {
-        width: 375px;
-        height: 461px;
+        flex-direction: column;
+        height: auto;
         gap: 30px;
     }
 }
