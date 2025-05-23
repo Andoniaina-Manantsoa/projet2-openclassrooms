@@ -16,7 +16,7 @@
 
 <body>
     <header class="main-container">
-        <nav class="menu">
+        <nav>
             <!--LOGO-->
             <img src="images/logo/Booki.png" alt="logo">
 
@@ -34,8 +34,8 @@
         <p>En plein centre-ville ou en plein nature</p>
 
         <!--FORMULAIRE-->
-        <form method="get" action="#">
-            <img src="images/formulaire/Group 15.png" alt="formulaire">
+        <form method="get" action="#" class="search-bar">
+            <i class="fa-solid fa-location-dot"></i>
             <input type="text" name="Ville" required autofocus placeholder="Marseille, France">
             <button type="button" class="button-search"><b>Rechercher</b></button>
         </form>
@@ -43,7 +43,7 @@
         <!--FILTRE-->
         <form method="get" action="#">
             <div class="filter-bar">
-                <h3>Filtres</h3>
+                <h2>Filtres</h2>
                 <div class="button-group">
                     <button type="button" class="button-filter">
                         <i class="fa-solid fa-money-bill-wave"></i> <b>Economique</b>
@@ -64,16 +64,15 @@
             </div>
         </form>
 
-
         <div class="info">
             <i class="fa-solid fa-info"></i>
-            Plus de 500 logements sont disponibles dans cette Ville
+            <p>Plus de 500 logements sont disponibles dans cette Ville</p>
         </div>
 
         <div class="hebergements-and-populaires">
             <section class="hebergements">
                 <div>
-                    <h2 class="section-title">Hébergements à Marseilles</h2>
+                    <h2 class="section-title">Hébergements à Marseille</h2>
                 </div>
                 <div class="hebergements-cards">
                     <a href="#" class="card">
@@ -267,7 +266,7 @@
                 <a href="#" class="card">
                     <img src="images/activites/reno-laithienne.jpg" alt="vue du port">
                     <div class="card-content">
-                        <div class="card-txt">
+                        <div>
                             <h3 class="card-title">Vieux-Port</h3>
                         </div>
                     </div>
@@ -276,7 +275,7 @@
                 <a href="#" class="card">
                     <img src="images/activites/paul-hermann.jpg" alt="fort de pomegues">
                     <div class="card-content">
-                        <div class="card-txt">
+                        <div>
                             <h3 class="card-title">Fort de Pomègues</h3>
                         </div>
                     </div>
@@ -285,7 +284,7 @@
                 <a href="#" class="card">
                     <img src="images/activites/kilyan-sockalingum.jpg" alt="parc national">
                     <div class="card-content">
-                        <div class="card-txt">
+                        <div>
                             <h3 class="card-title">Parc national des Calanques</h3>
                         </div>
                     </div>
@@ -294,11 +293,12 @@
                 <a href="#" class="card">
                     <img src="images/activites/florian-wehde.jpg" alt="notre dame">
                     <div class="card-content">
-                        <div class="card-txt">
+                        <div>
                             <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
                         </div>
                     </div>
                 </a>
+            </div>
         </section>
 
     </main>
