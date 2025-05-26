@@ -83,7 +83,6 @@ a {
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
 }
 
@@ -218,7 +217,7 @@ input[type="text"]:focus {
 
 .hebergements-and-populaires {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     margin-bottom: 50px;
 }
 
@@ -234,11 +233,12 @@ input[type="text"]:focus {
 .hebergements {
     width: 871px;
     display: grid;
+    justify-content: center;
     flex: 2;
 }
 
 .hebergements-cards {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
@@ -296,11 +296,9 @@ input[type="text"]:focus {
 .populaires-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .populaires-cards {
-    display: flex;
     flex-direction: column;
     max-height: 614px;
     gap: 15px;
@@ -441,9 +439,9 @@ li {
         height: 207px;
     }
 
-    .hebergements-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
     }
 
     .hebergements-cards img {
@@ -454,11 +452,6 @@ li {
     .populaires {
         height: 252px;
         margin-bottom: 30px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
     }
 
     .populaires-cards .card {
@@ -484,12 +477,6 @@ li {
         font-size: 14px;
     }
 
-    .activite {
-        height: 390px;
-        display: grid;
-        justify-content: center;
-    }
-
     .activites-cards {
         width: 864px;
         margin-bottom: 20px;
@@ -512,7 +499,6 @@ li {
     .footer-content .assistance {
         margin-right: 150px;
     }
-
 }
 
 /* Small devices (phones, less than 768px) */
@@ -668,10 +654,6 @@ li {
         height: 569px;
     }
 
-    .populaires h2 {
-        padding-left: 20px;
-    }
-
     .populaires-cards .card {
         width: 335px;
         height: 146px;
@@ -702,10 +684,6 @@ li {
 
     .hebergements h2 {
         padding-left: 20px;
-    }
-
-    .hebergements-cards {
-        grid-template-columns: 1fr;
     }
 
     .hebergements-cards .card {
