@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+html,
+body {
+    max-width: 100%;
+}
+
 img {
     display: block;
     object-fit: cover;
@@ -100,8 +105,12 @@ a {
 
 form {
     display: flex;
-    margin-bottom: 30px;
-    padding-top: 30px;
+    flex-direction: column;
+    gap: 30px;
+    /* espace entre la barre de recherche et les filtres */
+    max-width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 input {
@@ -200,7 +209,6 @@ input[type="text"]:focus {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    overflow: hidden;
 }
 
 .card-title {
@@ -226,7 +234,6 @@ input[type="text"]:focus {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
@@ -275,7 +282,6 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
     gap: 5px;
 }
 
@@ -324,7 +330,6 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
     gap: 6px;
 }
 
@@ -362,7 +367,7 @@ input[type="text"]:focus {
 }
 
 .activites-cards img {
-    min-width: 297px;
+    max-width: 297px;
     width: 100%;
     height: 380px;
 }
@@ -384,13 +389,13 @@ footer {
 
 .footer-content {
     width: 1340px;
-    min-height: 163px;
+    min-height: 180px;
     height: 100%;
     margin: 0 auto;
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .footer-content .assistance {
@@ -503,7 +508,6 @@ li {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-
     body {
         display: flex;
         flex-direction: column;
@@ -519,7 +523,6 @@ li {
         height: 115px;
         flex-direction: column;
         text-align: center;
-        /*padding: 20px;*/
         padding-top: 20px;
         gap: 10px;
     }
@@ -543,9 +546,7 @@ li {
         display: flex;
         width: 100%;
         height: 36px;
-        /*border-bottom: solid 0.1rem #d9d9d9;*/
         margin-top: 30px;
-        /*gap: 30px;*/
     }
 
     h1 {
@@ -566,9 +567,6 @@ li {
     .search-bar {
         display: flex;
         align-items: center;
-        justify-content: center;
-        padding: 20px;
-        margin: 0 auto;
     }
 
     .button-search {
@@ -647,7 +645,8 @@ li {
     .hebergements,
     .populaires,
     .activites {
-        width: 375px;
+        max-width: 375px;
+        width: 100%;
     }
 
     .populaires {
